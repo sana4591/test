@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="user-screen.html" class="back link">
+	<i class="icon icon-back"></i><span>{{'Back' | translate}}</span></a></div>
+    <div class="center sliding">{{'Switch language' || translate}}</div>
+    <div class="right"><a href="" id="switch_language_button" class="button button-round clear-btn">
+	<strong>{{'Save' | transalte}}</strong></a></div>
+  </div>
+</div>
+<div class="pages navbar-through">
+  <div data-page="switch-language" class="page" > 
+    <div class="page-content">
+	   <div class="content-block-title">{{'Choose your language' | transalte}}</div>
+      <div class="list-block">
+        <ul id="available_kitchens">
+			<li> 
+				<label class="label-radio item-content">
+				<input type="radio" class="language_radio" id="en" name="ks-radio" value="English">
+				<div class="item-inner"><div class="item-title">English</div></div></label>
+			</li>
+			<li>
+				<label class="label-radio item-content">
+				<input type="radio" class="language_radio" id="ar" name="ks-radio" value="العربية">
+				<div class="item-inner"><div class="item-title">العربية</div></div></label>
+			</li>
+		</ul>
+      
+      </div>
+	  </div>
+	</div>
+  </div>
+</div>

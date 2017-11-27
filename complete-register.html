@@ -1,0 +1,46 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="user-screen.html" class="back link"><i class="icon icon-back"></i><span>{{'Back' | translate}}</span></a></div>
+    <div class="center sliding">{{'Complete Registration' | translate}}</div>
+    <div class="right"><a href="" id="complete_registration_button" class="button button-round clear-btn"><strong>{{'Save' | translate }}</strong></a></div>
+  </div>
+</div>
+<div class="pages navbar-through">
+  <div data-page="complete-register" class="page" > 
+    <div class="page-content">
+	 <p id="loading" hidden>{{'loading..' | translate}}.. </p>
+	
+	  <div class="content-block-title">{{'Choose the building' | translate}}</div>
+      <div class="list-block inset">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-input">
+                  <input type="text" placeholder="tap to choose building" readonly="readonly" value="" id="available_buildings_T"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+	  
+	  <div class="content-block-title">{{'Choose the floor' | translate}}</div>
+    	<div class="list-block inset">
+      <p id="no_building_floors" hidden>{{'No floors in this building yet' | translate}}</p>
+	  <p id="loading_floors" hidden>{{'loading floors..' | translate}}</p>
+	    <ul id="available_floors_T">
+		</ul>
+      </div>
+	  
+	  <div class="content-block-title">{{'Choose the kitchen to send your orders to' | translate}}</div>
+      <div class="list-block inset">
+        <p id="no_floor_kitchens" hidden>{{'No kitchens in this floor yet' | translate}}</p>
+		<p id="loading_kitchens" hidden>{{'loading kitchens..' | translate}}</p>
+		<ul id="available_kitchens_T">
+		</ul>
+      </div>
+	  </div>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="" class="back link"><i class="icon icon-back"></i><span>{{'Back' | translate}}</span></a></div>
+    <div class="center sliding">{{'Order details' | translate}}</div>
+ </div>
+</div>
+<div class="pages navbar-through">
+  <div data-page="order-view" class="page no-toolbar">
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-title">{{'Order items' | translate}}</div>
+      <div class="list-block media-list inset">
+        <ul id="order-items">
+        </ul>
+      </div>
+	  </div>
+	
+      <div class="content-block-title">{{'Requester' | translate}}</div>
+      <div class="list-block inset">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-input" id="requester_name">
+                
+				</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+	  
+  <div class="content-block-title">{{'Location' | translate}}</div>
+      <div class="list-block inset">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-input" id="location">
+               
+				</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+     
+	<div class="content-block-title">{{'Time of delivery' | translate}}</div>
+      <div class="content-block inset">
+        <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
+          <div style="margin:0" class="list-block">
+            <ul style="border-top:none">
+              <li>
+                <div class="item-content">
+                  <div class="item-inner"> 
+                    <div class="item-input" id="time">
+					</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+	  
+	  
+	     
+ <div class="content-block" style="margin-top: 20px;display:none" id="action_button_block">
+        <div class="row">
+          <div class="col-100"><a href="" id="ack-button" class="button button-big button-fill"></a></div>
+        </div>
+      </div>
+  
+	</div>
+  </div>
+</div>

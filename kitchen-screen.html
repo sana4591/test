@@ -1,0 +1,50 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+     <div class="left"><a href="view_kitchen_categories.html" class="link icon-only"><i class="icon icon-bars"></i></a></div>
+    <div class="center sliding" id="kitchen-pg-title">{{'STC Kitchen' | translate}}</div>
+    <div class="right"><a href="" id="lang_btn_kitchen" class="button button-round clear-btn"><strong>عربي</strong></a></div>
+    <div class="subnavbar sliding">
+      <div class="buttons-row">
+	  <a href="#tab1" class="button active tab-link">{{'Recent' | translate}}</a>
+	  <a href="#tab2" class="button tab-link">{{'Pending' | translate}}</a>
+	  <a href="#tab3" class="button tab-link">{{'History' | translate}}</a></div>
+    </div>	 
+  </div>
+</div>
+<div class="pages navbar-through">
+  <div data-page="kitchen-screen" class="page with-subnavbar no-toolbar no-swipeback">
+     <div class="tabs-swipeable-wrap">
+      <div class="tabs">
+        <div id="tab1" class="page-content tab active">
+          <div class="content-block">
+            	<div class="no-network">{{'Waiting for network' | translate}}</div>
+				<p>{{'Recently received orders' | translate}}</p>
+			  <div class="list-block">
+				<ul id="tab1ul">
+				</ul>
+			  </div>
+		  </div>
+        </div>
+        <div id="tab2" class="page-content tab">
+          <div class="content-block">
+            <div class="no-network">{{'Waiting for network' | translate}}</div>
+				<p>{{'Orders wating for delivery' | translate}}</p>
+			   <div class="list-block">
+					 <ul id="tab2ul"></ul>
+				</div>
+		   </div>
+        </div>
+        <div id="tab3" class="page-content tab">
+          <div class="content-block">
+           <div class="no-network">{{'Waiting for network' | translate}}</div>
+			<p>{{'Delivered orders' | translate}}</p>
+			<div class="list-block">
+					 <ul id="tab3ul"></ul>
+				</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

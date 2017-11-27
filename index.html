@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html ng-app="myApp_ng">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>STC E-menu App</title>
+    <link rel="stylesheet" href="./dist/css/framework7.ios.css">
+    <link rel="stylesheet" href="./dist/css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="./dist/css/my-app.css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+	<link rel="icon" href="img/icon.png">
+    <link rel="apple-touch-icon" href="img/icon.png">
+	
+	
+  </head>
+  <body class="theme-spink" ng-controller="translateController">
+      
+  <div class="panel-overlay"></div>
+  <div class="panel panel-left panel-cover layout-dark">
+      <div class="content-block-title" translate="Options">Options</div>
+      <!--div class="content-block">
+        <a href="#" class="close-panel">close</a>
+      </div-->
+      <div class="list-block">
+        <ul>
+          <li><a href="view-my-orders.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'My Recent orders' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li><a href="my-favourite-orders.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'My favourite orders' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li><a href="my-favourite-items.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'My favourite items' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li><a href="frequently-used-items.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'Frequently used items' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li id="floors_orders_options" hidden><a href="floor_orders.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'Floor orders' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li><a href="change_location.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'My Location' | translate}}</div>
+                </div>
+              </div></a></li>
+          <li><a href="feedback.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'Feedback' | translate}}</div>
+                </div>
+              </div></a></li>
+		  <li><a href="switch_language.html" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'Switch language' | translate}}</div>
+                </div>
+              </div></a></li>
+		  <li><a href="welcome.html" onclick="log_out()" class="item-link close-panel"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title">{{'Logout' | translate}}</div>
+                </div>
+              </div></a></li>
+			  
+        </ul>
+      </div>
+    </div>
+  
+	<div class="views">
+      <div class="view view-main">	
+		<div class="navbar">
+		  <div class="navbar-inner">
+			<div class="center sliding">{{'Welcome to STC E-Menu' | translate}}</div>
+		  </div>
+		</div>
+<!--
+        <div class="toolbar">
+          <div class="toolbar-inner row">
+			  <a href="#" onclick="window.open('rtipanel://', '_system')"  class="link col-100"> 
+				{{'Back to Room Control APP' | translate}}
+			  </a>
+		  </div>
+        </div>
+-->
+		<div class="pages navbar-through">
+				<div data-page="empty" class="page ">
+				</div>
+			</div>
+		</div>
+    </div>
+	
+ <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+ <script type="text/javascript" src="./dist/js/framework7.js"></script>
+ <script type="text/javascript" src="./dist/js/my-app.js"></script>
+ <script type="text/javascript" src="./js/global_variables.js"></script>
+ <script type="text/javascript" src="./js/functions.js"></script>
+ <script type="text/javascript" src="./js/PushNotification.js"></script>
+ <script type="text/javascript" src="./js/kitchen-sink.js"></script>
+ <script type="text/javascript" src="./js/jquery.min.js"></script>
+ <script type="text/javascript" src="./js/server-functions.js"></script>
+ <script type="text/javascript" src="./js/user-server-functions.js"></script>
+ <script type="text/javascript" src="./js/kitchen-server-functions.js"></script>
+   
+   <!-- translation scripts  -->
+    <script src="./js/translate/angular.js"></script>
+    <script src="./js/translate/angular-translate.js"></script>
+    <script src="./js/translate/script.js"></script>
+    <script src="./js/translate/translations.js"></script>
+ 
+<script>
+		$(document).ready(function() {
+	 		// are we running in native app or in a browser?
+			window.isphone = false;
+			if(document.URL.indexOf("http://") === -1 
+				&& document.URL.indexOf("https://") === -1) {
+				window.isphone = true;
+			}
+			
+			if( window.isphone ) {
+				document.addEventListener("deviceready", onDeviceReady, false);
+				document.addEventListener("offline", onOffline, false);
+				document.addEventListener("online", onOnline, false);
+			} else {
+				onDeviceReady();
+			}
+		});
+	
+	function showHelp(url) {
+
+    var target = "_system";
+
+    var options = "location=yes";
+
+    inAppBrowserRef = window.open(url, target, options);
+
+    inAppBrowserRef.addEventListener('loaderror', loadErrorCallBack);
+}
+
+function loadErrorCallBack(params) {
+    console.log("alert('Sorry we cannot open that page. Message from the server is : " + params.message + "');");
+
+    //inAppBrowserRef.executeScript({ code: scriptErrorMesssage }, executeScriptCallBack);
+
+    inAppBrowserRef.close();
+
+    inAppBrowserRef = undefined;
+}
+
+	function onOffline() {
+    // Handle the offline event
+	//console.log('internet gone');
+	$$('.no-network').show();
+	var snd = new Media("internet_off.wav");
+     snd.play();
+	internet = 0 ;
+	}
+
+	function onOnline() {
+		// Handle the offline event
+	$$('.no-network').hide();
+	console.log('internet back');
+	internet = 1 ;
+	 var snd = new Media("internet_on.wav");
+     snd.play();
+	// here must refresh the page:
+	refresh_the_page();
+	}
+	
+	function log_out(){
+		myApp.ls.setItem("user", "");
+		myApp.ls.setItem("user_ar", "");
+		myApp.ls.setItem("userid", "");
+		myApp.ls.setItem("kitchen_id", "");
+	}
+	
+	function onDeviceReady(){
+	 deviceType = (navigator.userAgent.match(/iPad/i))  == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i))  == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : "null";
+	
+	var  current_lang = myApp.ls.getItem("lang");
+			console.log(current_lang);
+			if(current_lang  === null || current_lang === '' ){
+			console.log('default language is english');
+			myApp.ls.setItem("lang", "en");
+			// $translateProvider.preferredLanguage('en');
+			}
+			else if (current_lang === "ar"){
+				console.log('rtl should be imported');
+				$('head').append('<link rel="stylesheet" href="./dist/css/framework7.ios.rtl.css">');
+				
+				// change panel direction
+				$('.panel').addClass('panel-right').removeClass('panel-left');
+				
+				// change language
+				//changeLanguage('ar') ;
+				// $translateProvider.preferredLanguage('ar');
+			}
+			else if (current_lang === "en"){
+				//$translateProvider.preferredLanguage('en');
+			}
+	
+
+console.log('test');	
+	// read from local storage
+	 user = myApp.ls.getItem("user");
+	// if this is the  first time of installation load the welcome screen
+	
+	 
+console.log('test'+ user);	
+	
+	if(user === null || user === '' )
+	{
+		mainView.router.loadPage('welcome.html');
+	}
+	//else check who is this user or kitcken
+	else{
+	//set_up_notifcation();
+	//alert('going to call register device push now...');
+	language =  myApp.ls.getItem("lang");
+	order_items_html = "<li>"+t("no items are added yet")+"</li>";
+
+	regsiter_device_push('','');
+	
+	if(user === 'kitchen' )
+	{
+		$(".toolbar").hide();
+		mainView.router.loadPage('kitchen-screen.html');
+		
+	}
+	else
+		{
+			var user_name ;
+			if(language === "en")
+			user_name = user ;
+			else
+			user_name = myApp.ls.getItem("user_ar") ;
+			
+			mainView.router.loadPage('user-screen.html');
+			// notify, with: "welcome back, Ali :)"
+			myApp.addNotification({
+				title: t('STC E-Menu App Says'),
+				message: t('Welcome back, ')+user_name+t('! Happy ordering'),
+				hold: 2000
+			});
+			
+			// read the list of ids from local storage
+			if(myApp.ls.getItem("orders_ids"))
+			user_orders_ids  =  JSON.parse(myApp.ls.getItem("orders_ids"));
+			else user_orders_ids = [] ;
+			console.log('user_orders_ids:'+ user_orders_ids.length);
+		}
+	}
+}
+	 </script>
+	 
+	</body>
+</html>
